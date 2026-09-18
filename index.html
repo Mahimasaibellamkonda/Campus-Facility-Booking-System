@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Campus Facility Booking</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><!-- Navigation -->
+<header class="topbar">
+
+    <div class="brand">
+        <div class="brand-mark">CF</div>
+
+        <div>
+            <h2>CampusFlow</h2>
+            <span>Facility Booking System</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#booking">Book Facility</a>
+        <a href="#bookings">Bookings</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="dashboard">
+
+        <div class="welcome">
+
+            <span class="eyebrow">CAMPUS FACILITIES</span>
+
+            <h1>
+                Book the space<br>
+                <span>you need.</span>
+            </h1>
+
+            <p>
+                Reserve classrooms, laboratories, seminar halls
+                and other campus facilities from one place.
+            </p>
+
+            <a href="#booking" class="primary-btn">
+                Make a Booking →
+            </a>
+
+        </div>
+
+
+        <div class="stats-panel">
+
+            <div class="stat">
+                <span>Today's Bookings</span>
+                <strong id="todayCount">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Total Bookings</span>
+                <strong id="totalCount">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Available Facilities</span>
+                <strong>06</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+
+        <div class="section-title">
+
+            <span class="eyebrow">RESERVATION</span>
+
+            <h2>Book a Facility</h2>
+
+            <p>
+                Fill in the details to reserve a campus facility.
+            </p>
+
+        </div>
+
+
+        <form id="bookingForm" class="booking-form">
+
+            <div class="form-row">
+
+                <div class="form-field">
+
+                    <label for="studentName">
+                        Student / Staff Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="facility">
+                        Facility
+                    </label>
+
+                    <select id="facility" required>
+
+                        <option value="">
+                            Select facility
+                        </option>
+
+                        <option value="Seminar Hall">
+                            Seminar Hall
+                        </option>
+
+                        <option value="Computer Lab">
+                            Computer Lab
+                        </option>
+
+                        <option value="Conference Room">
+                            Conference Room
+                        </option>
+
+                        <option value="Auditorium">
+                            Auditorium
+                        </option>
+
+                        <option value="Sports Hall">
+                            Sports Hall
+                        </option>
+
+                        <option value="Project Lab">
+                            Project Lab
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-field">
+
+                    <label for="bookingDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="bookingDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="timeSlot">
+                        Time Slot
+                    </label>
+
+                    <select id="timeSlot" required>
+
+                        <option value="">
+                            Select time
+                        </option>
+
+                        <option value="09:00 AM - 10:00 AM">
+                            09:00 AM - 10:00 AM
+                        </option>
+
+                        <option value="10:00 AM - 11:00 AM">
+                            10:00 AM - 11:00 AM
+                        </option>
+
+                        <option value="11:00 AM - 12:00 PM">
+                            11:00 AM - 12:00 PM
+                        </option>
+
+                        <option value="01:00 PM - 02:00 PM">
+                            01:00 PM - 02:00 PM
+                        </option>
+
+                        <option value="02:00 PM - 03:00 PM">
+                            02:00 PM - 03:00 PM
+                        </option>
+
+                        <option value="03:00 PM - 04:00 PM">
+                            03:00 PM - 04:00 PM
+                        </option>
+
+                        <option value="04:00 PM - 05:00 PM">
+                            04:00 PM - 05:00 PM
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-field">
+
+                    <label for="participants">
+                        Number of Participants
+                    </label>
+
+                    <input
+                        type="number"
+                        id="participants"
+                        min="1"
+                        max="500"
+                        placeholder="Eg: 25"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="purpose">
+                        Purpose
+                    </label>
+
+                    <select id="purpose" required>
+
+                        <option value="">
+                            Select purpose
+                        </option>
+
+                        <option value="Academic">
+                            Academic Activity
+                        </option>
+
+                        <option value="Project">
+                            Project Work
+                        </option>
+
+                        <option value="Workshop">
+                            Workshop
+                        </option>
+
+                        <option value="Meeting">
+                            Meeting
+                        </option>
+
+                        <option value="Event">
+                            Event
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-field full">
+
+                <label for="notes">
+                    Additional Notes
+                </label>
+
+                <textarea
+                    id="notes"
+                    placeholder="Add any additional information..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <button
+                    type="reset"
+                    class="secondary-btn"
+                >
+                    Clear
+                </button>
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Confirm Booking
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- Bookings -->
+    <section id="bookings" class="bookings-section">
+
+        <div class="booking-header">
+
+            <div>
+                <span class="eyebrow">RESERVATIONS</span>
+                <h2>Booking Records</h2>
+            </div>
+
+            <div class="controls">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search bookings..."
+                >
+
+                <select id="filterFacility">
+
+                    <option value="All">
+                        All Facilities
+                    </option>
+
+                    <option value="Seminar Hall">
+                        Seminar Hall
+                    </option>
+
+                    <option value="Computer Lab">
+                        Computer Lab
+                    </option>
+
+                    <option value="Conference Room">
+                        Conference Room
+                    </option>
+
+                    <option value="Auditorium">
+                        Auditorium
+                    </option>
+
+                    <option value="Sports Hall">
+                        Sports Hall
+                    </option>
+
+                    <option value="Project Lab">
+                        Project Lab
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Facility</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Participants</th>
+                        <th>Purpose</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookingTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div id="emptyState" class="empty-state">
+
+            <div>📅</div>
+
+            <h3>No bookings yet</h3>
+
+            <p>
+                Your facility reservations will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+
+    <div>
+        <strong>CampusFlow</strong>
+        <p>Smart facility management for modern campuses.</p>
+    </div>
+
+    <span>
+        © 2026 CampusFlow
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
